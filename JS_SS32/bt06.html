@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sort(products) {
+        return products.sort((a, b) => a.price - b.price);
+      }
+      let products = [];
+      let n = +prompt("nhap vao so san pham");
+      for (let i = 0; i < n; i++) {
+        var product = {
+          id: "",
+          product_name: "",
+          price: 0,
+        };
+        product.id = prompt("nhap id");
+        product.product_name = prompt("nhap ten");
+        product.price = +prompt("nhap gia");
+        products.push(product);
+      }
+      sort(products);
+      console.log(products);
+    </script>
+  </body>
+</html>

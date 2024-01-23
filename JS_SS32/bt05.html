@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let books = [];
+      let n = +prompt("nhap vao so luong sach");
+      for (let i = 0; i < n; i++) {
+        var book = {
+          author: "",
+          name: "",
+        };
+        book.author = prompt("ten tac gia");
+        book.name = prompt("ten sach");
+        books.push(book);
+      }
+      let find = prompt("nhap vao tac gia can tim");
+      for (let key in books) {
+        if (books[key].author === find) {
+          console.log(books[key]);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Infomation {
+        constructor(id, name, phone, address) {
+          this.id = id;
+          this.name = name;
+          this.phone = phone;
+          this.address = address;
+        }
+      }
+      var infomation = new Infomation();
+      infomation.id = +prompt("Vui lòng nhập id");
+      infomation.name = prompt("Vui lòng nhập tên");
+      infomation.phone = +prompt("Vui lòng nhập số điện thoại");
+      infomation.address = prompt("Vui lòng nhập địa chỉ");
+
+      console.log("thông tin id người dùng là:", infomation.id);
+      console.log("thông tin tên người dùng là:", infomation.name);
+      console.log("thông tin số điện thoại người dùng là:", infomation.phone);
+      console.log("thông tin địa chỉ người dùng là:", infomation.address);
+    </script>
+  </body>
+</html>

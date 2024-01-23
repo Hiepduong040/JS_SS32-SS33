@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bt1</title>
+  </head>
+  <body>
+    <script>
+      class Jobs {
+        constructor(id, title, description, completed) {
+          (this.id = id),
+            (this.title = title),
+            (this.description = description),
+            (this.completed = completed);
+        }
+      }
+      let listJobs = new Array();
+      document.writeln(`1.thêm mới công việc vào trong mảng <br>`);
+      document.write(`2.in ra danh sách công việc <br>`);
+      document.write(`3.Tìm kiếm công việc theo id <br>`);
+      document.write(`4.Thoat`);
+      let n;
+      do {
+        n = +prompt("Nhap lua chon cua ban");
+
+        switch (n) {
+          case 1:
+            let job = new Jobs();
+            job.id = prompt("Nhap id");
+            job.title = prompt("Nhap tieu de");
+            job.description = prompt("Nhap mo ta cong viec");
+            job.completed = prompt("Nhap trang thai hoan thanh");
+            listJobs.push(Jobs);
+            break;
+          case 2:
+            console.log(listJobs);
+            break;
+          case 3:
+            let idFind = prompt("Nhap id cong viec muon tim");
+            let check = 1;
+            for (const key in listJobs) {
+              if (listJobs[key].id === idFind) {
+                check = 0;
+                console.log(listJobs[key]);
+              }
+            }
+            if (check) {
+              console.log("Ko tim thay");
+            }
+            break;
+          case 4:
+            break;
+          default:
+            alert("Nhap tu 1 den 4");
+            break;
+        }
+      } while (n !== 4);
+    </script>
+  </body>
+</html>

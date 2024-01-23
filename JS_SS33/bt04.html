@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 200px;
+        height: 100px;
+        color: rgb(255, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="addBook()">Thêm sách</button>
+    <script>
+      let library = [];
+      function addBook() {
+        var book = {
+          title: "",
+          author: "",
+          publishedYear: "",
+        };
+        book.title = prompt("nhap tieu de");
+        book.author = prompt("nhap tac gia");
+        book.publishedYear = prompt("nhap nam xuat ban");
+        library.push(book);
+        console.log(library);
+      }
+    </script>
+  </body>
+</html>
